@@ -3,42 +3,22 @@
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
-    background-color: #ffffff;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
+    background: url('cantinoplanisphere.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
   }
 
   .white-section {
     background-color: white;
-    padding: 60px 40px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .white-section h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #000;
+    color: black;
+    padding: 40px;
+    margin-top: 60vh;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
   }
 </style>
 
-<img src="cantinoplanisphere.png" alt="Cantino Planisphere" class="hero-image">
-
 <div class="white-section">
-  <h1>The Cantino Planisphere</h1>
-
-  <p>
-    A copy secretly taken from the Portuguese XV‑century <em>Padrão Real</em> — a State‑secret world map produced during the Portuguese Age of Discovery (<em>Os Descobrimentos</em>). It stands not only as one of the greatest examples of human achievement, but also as a reminder of the value of secrecy, knowledge, access and control of information, and the risks inherent in its leakage.
-  </p>
-
-  <p>
-    It was on the basis of this map that the German cartographers would later write the <em>Itinerarium</em>, a manual of maritime mastery that enabled them, in the aftermath of the so‑called “Invincible Armada”, to challenge Portuguese dominance in the Indian Ocean — ultimately influencing the development of modern international maritime law.
-  </p>
+  <h2>Your Title Here</h2>
+  <p>Your text goes here. Add historical notes, commentary, or anything else.</p>
 </div>

@@ -23,17 +23,24 @@ display: block;
 }
 
   /* White section aligned with the image width */
-  .white-section {
-    width: fit-content;
-    max-width: 85vw;
-    margin: 0 auto;
-    padding: 40px 50px;
-    background-color: white;
-    color: black;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    line-height: 1.6;
-    font-size: 18px;
+  ..white-section {
+  width: fit-content;
+  max-width: 85vw;
+  margin: 0 auto;
+  padding: 40px 50px;
+  background-color: white;
+  color: black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  line-height: 1.6;
+  font-size: 18px;
+
+  /* Two-column folio layout */
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
+  column-fill: auto; /* prevents vertical balancing */
+}
 
     /* Two-column folio layout */
     column-count: 2;

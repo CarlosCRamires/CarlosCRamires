@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
 <style>
   body {
     margin: 0;
@@ -6,22 +11,25 @@
     background: url('cantinoplanisphere.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
+    min-height: 100vh;
+    cursor: pointer; /* feels like a page you can turn */
   }
 
   .white-section {
     background-color: white;
     color: black;
     padding: 40px 50px;
-    margin-top: 60vh;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     line-height: 1.6;
     font-size: 18px;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 60vh auto 0 auto; /* pushes it below the map */
   }
 </style>
+</head>
+
+<body onclick="goNextPage()">
 
 <div class="white-section">
   <h2>The Cantino Planisphere</h2>
@@ -52,3 +60,12 @@
     modern international maritime law.
   </p>
 </div>
+
+<script>
+  function goNextPage() {
+    window.location.href = "index.html"; /* or "page3.html" if you add more */
+  }
+</script>
+
+</body>
+</html>

@@ -1,4 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
 <style>
+  /* Smooth scroll for the “open the book” effect */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Homepage background */
   body {
     margin: 0;
     padding: 0;
@@ -54,28 +65,124 @@
     display: inline-block;
     margin: 10px;
     padding: 12px 26px;
-    background-color: transparent;   /* no color */
+    background-color: transparent;
     color: white;
     text-decoration: none;
     border: none;
-    outline: none;                   /* remove outline */
+    outline: none;
     border-radius: 4px;
     font-size: 16px;
-    font-weight: 700;                /* bold text */
+    font-weight: 700;
   }
 
   .center-buttons a:hover {
-    background-color: transparent;   /* no hover color */
-    text-shadow: 0 0 6px rgba(255,255,255,0.6); /* elegant glow */
+    background-color: transparent;
+    text-shadow: 0 0 6px rgba(255,255,255,0.6);
   }
 
   .center-buttons a:focus {
-    outline: none;                   /* remove focus outline */
+    outline: none;
+  }
+
+  /* Cantino section background */
+  .cantino-section {
+    background: url('cantinoplanisphere.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 60vh; /* pushes the white section down */
+  }
+
+  /* White explanatory section */
+  .white-section {
+    background-color: white;
+    color: black;
+    padding: 40px 50px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
+</head>
 
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<body>
 
-<div class="menu" id="menu">
-  <a href="/practice-guidance.html">Practice Guidance</a>
-  <a href="/contacts.html">Contacts and Professional
+<!-- HOMEPAGE COVER (click anywhere to open the book) -->
+<div class="homepage-cover" onclick="openCantino()">
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="/practice-guidance.html">Practice Guidance</a>
+    <a href="/contacts.html">Contacts and Professional Email</a>
+    <a href="/enquiries.html">Enquiries and Assurances</a>
+    <a href="/confidentiality.html">Confidentiality and Professional Secrecy</a>
+    <a href="/engagement-flow.html">Engagement Flow</a>
+    <a href="/governing-law-tax.html">Governing Contractual Law and Tax Residency</a>
+    <a href="/consumer-law.html">Consumer Law</a>
+    <a href="/online-safety.html">Online Safety and Encryption</a>
+    <a href="/library.html">Library</a>
+    <a href="/social-media.html">Social Media</a>
+  </div>
+
+  <div class="center-buttons">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/ai-principles.html">AI Use Statement of Principle</a>
+    <a href="/esg.html">ESG</a>
+  </div>
+
+</div> <!-- end homepage-cover -->
+
+
+<!-- CANTINO SECTION -->
+<div id="cantino" class="cantino-section">
+
+  <div class="white-section">
+    <h2>The Cantino Planisphere</h2>
+
+    <p>
+      A copy secretly taken from the Portuguese fifteenth‑century <em>Padrão Real</em> —
+      the state‑secret, continuously updated world map produced during
+      “Os Descobrimentos”. It stands not only as a reminder of the value of data,
+      its confidentiality, access, and control, but also of the inherent risks of
+      its leakage.
+    </p>
+
+    <p>
+      In fact, it was through such leakage that the Dutch — already deeply engaged
+      in espionage across the Indies — came to learn the routes, currents, and
+      winds essential to navigation at the time. These developments unfolded
+      against the backdrop of the <em>jus imperii lusitani</em>, articulated by
+      Serafim de Freitas, the Portuguese doctrine that claimed exclusive dominion
+      over the South Atlantic and the Indian Ocean and sought to enforce a
+      closed‑sea model (<em>mare clausum</em>).
+    </p>
+
+    <p>
+      It was precisely this framework that Hugo Grotius set out to challenge in
+      <em>Mare Liberum</em>, arguing that the seas should be open to all. Together
+      with later contributions from jurists such as John Selden and the broader
+      British legal tradition, this intellectual contest laid the foundations of
+      modern international maritime law.
+    </p>
+  </div>
+
+</div> <!-- end cantino-section -->
+
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function openCantino() {
+    document.getElementById("cantino").scrollIntoView();
+  }
+</script>
+
+</body>
+</html>

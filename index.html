@@ -210,10 +210,14 @@
 
   // Scroll → go to white section (only if scrolling DOWN)
   cover.addEventListener('wheel', (e) => {
-    if (e.deltaY > 20) {
-      navSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+  // Se a secção branca já está visível, não fazer nada
+  const navTop = navSection.getBoundingClientRect().top;
+  if (navTop < window.innerHeight - 50) return;
+
+  if (e.deltaY > 20) {
+    navSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
 
   /* ---------------------------
      ZONE 2 — WHITE SECTION

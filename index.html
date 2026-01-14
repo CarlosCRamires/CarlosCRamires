@@ -195,32 +195,45 @@
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   }
 
-  /* ZONE 1 — CLICK OR SCROLL → JUMP TO WHITE SECTION */
   const cover = document.getElementById('cover');
   const navSection = document.getElementById('navSection');
 
+  /* ---------------------------
+     ZONE 1 — COVER BEHAVIOUR
+     --------------------------- */
+
+  // Click → go to white section
   cover.addEventListener('click', () => {
     navSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  cover.addEventListener('wheel', () => {
-    navSection.scrollIntoView({ behavior: 'smooth' });
+  // Scroll → go to white section (only if scrolling DOWN)
+  cover.addEventListener('wheel', (e) => {
+    if (e.deltaY > 20) {
+      navSection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 
-  /* ZONE 2 — CLICK → NEXT PAGE, SCROLL → PREVIOUS PAGE */
+  /* ---------------------------
+     ZONE 2 — WHITE SECTION
+     --------------------------- */
+
+  let scrollLock = false;
+
+  // Click → next page
   navSection.addEventListener('click', () => {
+    scrollLock = true;
+    setTimeout(() => scrollLock = false, 300);
     window.location.href = "/cantinho.html";
   });
 
-  let lastScroll = 0;
+  // Scroll → previous page (only if scrolling UP)
   navSection.addEventListener('wheel', (e) => {
-    const currentScroll = e.deltaY;
-
-    if (currentScroll < 0 || currentScroll > 0) {
+    if (scrollLock) return; // prevent conflict with click
+    if (e.deltaY < -20) {
+      scrollLock = true;
       window.location.href = "/index.html";
     }
-
-    lastScroll = currentScroll;
   });
 </script>
 

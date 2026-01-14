@@ -1,5 +1,113 @@
-# Carlos C. Ramires
-### Compliance Law
+---
+layout: none
+---
 
-This site is being prepared.  
-A governance‑grade digital presence is under construction.
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url('logo-background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+
+  /* Hamburger icon */
+  .menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Side menu */
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.92);
+    width: 260px;
+    height: 100%;
+    padding-top: 60px;
+    text-align: left;
+  }
+
+  .menu a {
+    display: block;
+    padding: 14px 22px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    font-size: 16px;
+  }
+
+  .menu a:hover {
+    background-color: #333;
+  }
+
+  /* Center buttons */
+  .center-buttons {
+    margin-top: 320px;
+  }
+
+  .center-buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 26px;
+    background-color: rgba(255,255,255,0.12);
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .center-buttons a:hover {
+    background-color: rgba(255,255,255,0.28);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+</style>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
+  <a href="/practice-guidance.html">Practice Guidance</a>
+  <a href="/contacts.html">Contacts and Professional Email</a>
+  <a href="/enquiries.html">Enquiries and Assurances</a>
+  <a href="/confidentiality.html">Confidentiality and Professional Secrecy</a>
+  <a href="/engagement-flow.html">Engagement Flow</a>
+  <a href="/governing-law-tax.html">Governing Contractual Law and Tax Residency</a>
+  <a href="/consumer-law.html">Consumer Law</a>
+  <a href="/online-safety.html">Online Safety and Encryption</a>
+  <a href="/library.html">Library</a>
+  <a href="/social-media.html">Social Media</a>
+</div>
+
+<div class="center-buttons">
+  <a href="/privacy.html">Privacy Policy</a>
+  <a href="/ai-principles.html">AI Use Statement of Principle</a>
+  <a href="/esg.html">ESG</a>
+</div>
+
+<footer>
+  www.carlosramires.eu
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+</script>

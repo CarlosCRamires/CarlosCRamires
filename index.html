@@ -54,18 +54,23 @@
     display: inline-block;
     margin: 10px;
     padding: 12px 26px;
-    background-color: Transparent;
+    background-color: transparent;   /* no color */
     color: white;
     text-decoration: none;
     border: none;
+    outline: none;                   /* remove outline */
     border-radius: 4px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700;                /* bold text */
   }
 
   .center-buttons a:hover {
-    background-color:transparent;
-    text-shadow: 0 0 6px rgba(255,255,255,0.6);
+    background-color: transparent;   /* no hover color */
+    text-shadow: 0 0 6px rgba(255,255,255,0.6); /* elegant glow */
+  }
+
+  .center-buttons a:focus {
+    outline: none;                   /* remove focus outline */
   }
 </style>
 
@@ -73,26 +78,4 @@
 
 <div class="menu" id="menu">
   <a href="/practice-guidance.html">Practice Guidance</a>
-  <a href="/contacts.html">Contacts and Professional Email</a>
-  <a href="/enquiries.html">Enquiries and Assurances</a>
-  <a href="/confidentiality.html">Confidentiality and Professional Secrecy</a>
-  <a href="/engagement-flow.html">Engagement Flow</a>
-  <a href="/governing-law-tax.html">Governing Contractual Law and Tax Residency</a>
-  <a href="/consumer-law.html">Consumer Law</a>
-  <a href="/online-safety.html">Online Safety and Encryption</a>
-  <a href="/library.html">Library</a>
-  <a href="/social-media.html">Social Media</a>
-</div>
-
-<div class="center-buttons">
-  <a href="/privacy.html">Privacy Policy</a>
-  <a href="/ai-principles.html">AI Use Statement of Principle</a>
-  <a href="/esg.html">ESG</a>
-</div>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
+  <a href="/contacts.html">Contacts and Professional

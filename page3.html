@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
 
+    <!-- Romanesca Italica -->
+    <style>
+        @font-face {
+            font-family: "Romanesca-Italic";
+            src: url("fonts/Romanesca-IV-italica.ttf") format("truetype");
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2; /* cinzento claro */
+            font-family: "Romanesca-Italic", serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-container {
+            background-color: #ffffff; /* folha branca */
+            padding: 80px;
+            max-width: 900px;
+            width: 80%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .motto {
+            font-size: 32px;
+            line-height: 1.4;
+            color: #333333; /* charcoal grey */
+            white-space: pre-line; /* respeita a quebra de linha */
+        }
+
+        /* Home icon */
+        .home-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .home-icon:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="home-icon">⌂</a>
+
+    <div class="page-container">
+        <div class="motto">
+            So that silence
+            Would not become complicity
+        </div>
+    </div>
+
+</body>
+</html>

@@ -51,7 +51,7 @@ layout: none
 
   /* Center buttons */
   .center-buttons {
-    margin-top: 320px;
+    margin-top: 150px;
   }
 
   .center-buttons a {

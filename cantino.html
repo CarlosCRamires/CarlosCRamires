@@ -13,39 +13,34 @@
   }
 
   .map-container img {
-display: block;
-  width: 100%;
-  height: auto;
-  max-height: 85vh;
-  object-fit: contain;
-  object-position: top;
-  margin: 0 auto;
-}
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+    object-position: top;
+    margin: 0 auto;
+  }
 
   /* White section aligned with the image width */
-  ..white-section {
-  width: fit-content;
-  max-width: 85vw;
-  margin: 0 auto;
-  padding: 40px 50px;
-  background-color: white;
-  color: black;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  line-height: 1.6;
-  font-size: 18px;
-
-  /* Two-column folio layout */
-  column-count: 2;
-  column-gap: 40px;
-  text-align: justify;
-  column-fill: auto; /* prevents vertical balancing */
-}
+  .white-section {
+    width: fit-content;
+    max-width: 85vw;
+    margin: 0 auto;
+    padding: 40px 50px;
+    background-color: white;
+    color: black;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    line-height: 1.6;
+    font-size: 18px;
 
     /* Two-column folio layout */
     column-count: 2;
     column-gap: 40px;
     text-align: justify;
+    column-fill: auto; /* prevents vertical balancing */
+    hyphens: auto;
   }
 </style>
 </head>
@@ -63,34 +58,4 @@ display: block;
     A copy secretly taken from the Portuguese fifteenth‑century <em>Padrão Real</em> —
     the state‑secret, continuously updated world map produced during
     “Os Descobrimentos”. It stands not only as a reminder of the value of data,
-    its confidentiality, access, and control, but also of the inherent risks of
-    its leakage.
-  </p>
-
-  <p>
-    In fact, it was through such leakage that the Dutch — already deeply engaged
-    in espionage across the Indies — came to learn the routes, currents, and
-    winds essential to navigation at the time. These developments unfolded
-    against the backdrop of the <em>jus imperii lusitani</em>, articulated by
-    Serafim de Freitas, the Portuguese doctrine that claimed exclusive dominion
-    over the South Atlantic and the Indian Ocean and sought to enforce a
-    closed‑sea model (<em>mare clausum</em>).
-  </p>
-
-  <p>
-    It was precisely this framework that Hugo Grotius set out to challenge in
-    <em>Mare Liberum</em>, arguing that the seas should be open to all. Together
-    with later contributions from jurists such as John Selden and the broader
-    British legal tradition, this intellectual contest laid the foundations of
-    modern international maritime law.
-  </p>
-</div>
-
-<script>
-  function goNextPage() {
-    window.location.href = "index.html";
-  }
-</script>
-
-</body>
-</html>
+    its confidentiality

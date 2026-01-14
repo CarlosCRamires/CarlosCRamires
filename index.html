@@ -110,8 +110,21 @@
   }
 
   .section-marker {
-    margin-top: 30px;
-    font-size: 28px;
+  font-size: 4em;
+  margin-top: 30px;
+  position: relative;
+}
+
+.section-marker::after {
+  content: "/";
+  display: block;
+  color: #7b0f1a; /* red wine tone */
+  font-size: 3em; /* tall slash */
+  line-height: 0.6;
+  margin: 0 auto;
+  width: 16px; /* one finger width */
+  text-align: center;
+}
   }
 
   /* -------------------------

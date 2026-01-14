@@ -12,13 +12,14 @@
     background-color: white;
   }
 
-  /* Cantino image: real proportions, 85% of screen height */
   .map-container img {
-    display: block;
-    height: 85vh;
-    width: auto;
-    margin: 0 auto;
-  }
+  display: block;
+  width: 100%;      /* full width of the page */
+  height: auto;     /* keep proportions */
+  max-height: 85vh; /* never exceed 85% of screen height */
+  object-fit: contain;
+  margin: 0 auto;
+}
 
   /* White section aligned with the image width */
   .white-section {

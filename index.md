@@ -81,7 +81,9 @@ layout: none
 </style>
 
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
+<div class="logo-container">
+  <img src="logo.png" alt="Carlos Ramires Logo" class="logo">
+</div>
 <div class="menu" id="menu">
   <a href="/practice-guidance.html">Practice Guidance</a>
   <a href="/contacts.html">Contacts and Professional Email</a>

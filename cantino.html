@@ -8,41 +8,44 @@
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
-    background: url('cantinoplanisphere.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    min-height: 100vh;
+    cursor: pointer;
+    background-color: white;
   }
 
+  /* Cantino image: real proportions, 85% of screen height */
+  .map-container img {
+    display: block;
+    height: 85vh;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  /* White section aligned with the image width */
   .white-section {
+    width: fit-content;
+    max-width: 85vw;
+    margin: 0 auto;
+    padding: 40px 50px;
     background-color: white;
     color: black;
-    padding: 40px 50px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     line-height: 1.6;
     font-size: 18px;
-    max-width: 900px;
-    margin: 60vh auto 0 auto;
-  }
-</style>
-  }
 
-  .white-section {
-    background-color: white;
-    color: black;
-    padding: 40px 50px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    line-height: 1.6;
-    font-size: 18px;
-    max-width: 900px;
-    margin: 60vh auto 0 auto; /* pushes it below the map */
+    /* Two-column folio layout */
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
   }
 </style>
 </head>
 
 <body onclick="goNextPage()">
+
+<div class="map-container">
+  <img src="cantinoplanisphere.png" alt="Cantino Planisphere">
+</div>
 
 <div class="white-section">
   <h2>The Cantino Planisphere</h2>
@@ -76,7 +79,7 @@
 
 <script>
   function goNextPage() {
-    window.location.href = "index.html"; /* or "page3.html" if you add more */
+    window.location.href = "index.html";
   }
 </script>
 

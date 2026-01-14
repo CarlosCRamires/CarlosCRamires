@@ -7,7 +7,7 @@ layout: none
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
-    background: url('logo-background.png') no-repeat center center fixed;
+    background: url('fullpagelogo.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     text-align: center;
@@ -69,21 +69,10 @@ layout: none
   .center-buttons a:hover {
     background-color: rgba(255,255,255,0.28);
   }
-
-  footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    opacity: 0.7;
-  }
 </style>
 
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
-<div class="logo-container">
-  <img src="logo.png" alt="Carlos Ramires Logo" class="logo">
-</div>
+
 <div class="menu" id="menu">
   <a href="/practice-guidance.html">Practice Guidance</a>
   <a href="/contacts.html">Contacts and Professional Email</a>
@@ -102,10 +91,6 @@ layout: none
   <a href="/ai-principles.html">AI Use Statement of Principle</a>
   <a href="/esg.html">ESG</a>
 </div>
-
-<footer>
-  www.carlosramires.eu
-</footer>
 
 <script>
   function toggleMenu() {

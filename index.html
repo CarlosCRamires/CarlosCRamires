@@ -116,14 +116,13 @@
 }
 
 .section-marker::after {
-  content: "/";
+  content: "";
   display: block;
-  color: #7b0f1a; /* red wine tone */
-  font-size: 3em; /* tall slash */
-  line-height: 0.6;
-  margin: 0 auto;
+  background-color: #7b0f1a; /* red wine tone */
+  height: 5px; /* half the height of the previous slash */
   width: 16px; /* one finger width */
-  text-align: center;
+  margin: 12px auto 0 auto; /* centered beneath the § */
+  border-radius: 3px; /* softens the ends */
 }
   }
 

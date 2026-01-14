@@ -203,9 +203,10 @@
      --------------------------- */
 
   // Click → go to white section
-  cover.addEventListener('click', () => {
-    navSection.scrollIntoView({ behavior: 'smooth' });
-  });
+  cover.addEventListener('click', (e) => {
+  if (e.target.closest('#navSection')) return;
+  navSection.scrollIntoView({ behavior: 'smooth' });
+});
 
   // Scroll → go to white section (only if scrolling DOWN)
   cover.addEventListener('wheel', (e) => {

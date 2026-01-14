@@ -8,17 +8,21 @@
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
-    background: url('fullpagelogo.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    cursor: pointer; /* makes it feel clickable */
+    background-color: white;
+    overflow-x: hidden;
   }
 
+  /* -------------------------
+     ZONE 1 — NAVY COVER PAGE
+     ------------------------- */
   .homepage-cover {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+    background: url('fullpagelogo.png') no-repeat center center;
+    background-size: cover;
     position: relative;
+    cursor: pointer;
+    overflow: hidden; /* prevents scrolling */
   }
 
   .menu-icon {
@@ -29,6 +33,7 @@
     cursor: pointer;
     font-weight: bold;
     z-index: 10;
+    color: white;
   }
 
   .menu {
@@ -59,6 +64,7 @@
 
   .center-buttons {
     margin-top: 40px;
+    text-align: center;
   }
 
   .center-buttons a {
@@ -78,13 +84,62 @@
   .center-buttons a:hover {
     text-shadow: 0 0 6px rgba(255,255,255,0.6);
   }
+
+  /* -------------------------
+     ZONE 2 — WHITE NAVIGATION
+     ------------------------- */
+  .navigation-section {
+    background-color: white;
+    color: black;
+    padding: 60px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 0;
+    text-align: center;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    font-size: 20px;
+    line-height: 1.6;
+    cursor: pointer;
+  }
+
+  .navigation-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  .section-marker {
+    margin-top: 30px;
+    font-size: 28px;
+  }
+
+  /* -------------------------
+     HOME ICON (ALL PAGES)
+     ------------------------- */
+  .home-icon {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+    z-index: 50;
+  }
+
+  .home-icon:hover {
+    opacity: 0.7;
+  }
 </style>
 </head>
 
-<body onclick="goToCantino()">
+<body>
 
-<div class="homepage-cover">
+<!-- HOME ICON -->
+<a href="/index.html" class="home-icon">⌂</a>
 
+<!-- ZONE 1 — NAVY COVER -->
+<div class="homepage-cover" id="cover">
   <div class="menu-icon" onclick="event.stopPropagation(); toggleMenu()">☰</div>
 
   <div class="menu" id="menu">
@@ -105,18 +160,56 @@
     <a href="/ai-principles.html">AI Use Statement of Principle</a>
     <a href="/esg.html">ESG</a>
   </div>
+</div>
 
+<!-- ZONE 2 — WHITE NAVIGATION SECTION -->
+<div class="navigation-section" id="navSection">
+  <h2><strong>Navigation</strong></h2>
+
+  <p>
+    Click to turn the page forward.<br>
+    Scroll to return to the leaf before.<br>
+    The home icon will guide you back<br>
+    to the opening table of contents.
+  </p>
+
+  <div class="section-marker">§</div>
 </div>
 
 <script>
+  /* MENU TOGGLE */
   function toggleMenu() {
     const menu = document.getElementById('menu');
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
   }
 
-  function goToCantino() {
+  /* ZONE 1 — CLICK OR SCROLL → JUMP TO WHITE SECTION */
+  const cover = document.getElementById('cover');
+  const navSection = document.getElementById('navSection');
+
+  cover.addEventListener('click', () => {
+    navSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  cover.addEventListener('wheel', () => {
+    navSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  /* ZONE 2 — CLICK → NEXT PAGE, SCROLL → PREVIOUS PAGE */
+  navSection.addEventListener('click', () => {
     window.location.href = "/cantinho.html";
-  }
+  });
+
+  let lastScroll = 0;
+  navSection.addEventListener('wheel', (e) => {
+    const currentScroll = e.deltaY;
+
+    if (currentScroll < 0 || currentScroll > 0) {
+      window.location.href = "/index.html";
+    }
+
+    lastScroll = currentScroll;
+  });
 </script>
 
 </body>

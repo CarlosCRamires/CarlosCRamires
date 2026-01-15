@@ -204,7 +204,8 @@
         The opening table of contents (initial menus)
     </div>
 
-    <div class="section-marker">§</div>
+    <div class="section-marker" style="font-family: 'Romanesca-IV', serif; font-size: 8em;">
+    §
 </div>
    
 <script>
@@ -237,8 +238,7 @@ function toggleMenu() {
 
   // Scroll → go to white section (only if scrolling DOWN)
   cover.addEventListener('wheel', (e) => {
-  // Se a secção branca já está visível, não fazer nada
-  const navTop = navSection.getBoundingClientRect().top;
+    const navTop = navSection.getBoundingClientRect().top;
   if (navTop < window.innerHeight - 50) return;
 
   if (e.deltaY > 20) {
